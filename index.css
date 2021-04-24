@@ -1,0 +1,158 @@
+html,
+main,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Noto Sans JP, sans-serif;
+  font-size: 13px;
+}
+
+body {
+ height: 100vh !important;
+ overflow: hidden;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-left {
+  float: left;
+  margin-left: 20px;
+  padding-top: 5px;
+}
+
+.nav-right {
+  float: right;
+  margin-right: 20px;
+  padding-top: 3px;
+}
+
+.google-search {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 235px 100px 70px 770px;
+  grid-template-areas:
+    ". google-logo ."
+    ". search ."
+    ". flexbox .";
+}
+
+.google-search input:focus,
+.google-search input:active {
+  outline: none;
+  border: 1px solid #4485f5;
+  box-shadow: 0 0 2px #4485f5;
+}
+
+#google-logo {
+  grid-area: google-logo;
+  justify-self: center;
+  align-self: flex-end;
+}
+
+#search {
+  background-image: url("img/record-icon.png"); 
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position:right;;
+  grid-area: search;
+  height: 30px;
+  width: 550px;
+}
+
+#flexbox {
+  display: flexbox;
+  grid-area: flexbox;
+  justify-self: center;
+  align-self: center;
+}
+
+#sign-in {
+  float: right;
+  margin: 12px;
+}
+
+.menu {
+  float: right;
+  margin-top: 10px;
+  padding: 10px;
+  padding-right: 40px;
+}
+
+.sign-in-btn {
+  color: #fff;
+  background-color: #4485f5;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  margin-top: 3px;
+  width: 70px;
+}
+
+.sign-in-btn:active {
+  background-color: #326fd8;
+}
+
+.search-btn,
+.random-btn {
+  grid-area: random-btn;
+  background-color: rgba(192, 192, 192, 0.24);
+  font-size: 13px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 3px;
+}
+
+.search-btn:active,
+.random-btn:active {
+  background-color: rgb(221, 221, 221);
+}
+
+.search-btn:hover,
+.random-btn:hover {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5),
+              0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+#search:hover {
+  box-shadow: 0 0 4px rgba(139, 153, 167, 0.63);
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  background-color: rgba(142, 142, 145, 0.24);
+}
+
+input[type="text"] {
+  margin: 30px;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 35px;
+}
+
+li a {
+  display: block;
+  padding: 15px 5px;
+  color: rgb(65, 65, 65);
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
